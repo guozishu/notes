@@ -4,13 +4,13 @@ heroImage: /home-logo.png
 heroText: 王海东技术博客
 tagline: 技术博客
 actionText: 博客 →
-actionLink: /zh/guide/
+actionLink: /javascript/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present longwang
+- title: 学习
+  details: 活到老学到老，专注于写作
+- title: 实践
+  details: 通过实践来检验学习成果
+- title: 标准
+  details: 君子食无求饱，居无求安，敏于事而慎于言，就有道而正焉，可谓好学也已
+footer: MIT Licensed | Copyright © 2021/10/1-present 王海东
 ---

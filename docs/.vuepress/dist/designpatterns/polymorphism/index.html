@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>多态 | 王海东技术博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.d03b190c.js" as="script"><link rel="preload" href="/assets/js/2.d37cd0fb.js" as="script"><link rel="preload" href="/assets/js/18.bdb59058.js" as="script"><link rel="prefetch" href="/assets/js/10.e8ca2a0c.js"><link rel="prefetch" href="/assets/js/11.0a189579.js"><link rel="prefetch" href="/assets/js/12.95869a5a.js"><link rel="prefetch" href="/assets/js/13.c8e361f1.js"><link rel="prefetch" href="/assets/js/14.78598a20.js"><link rel="prefetch" href="/assets/js/15.4a64277d.js"><link rel="prefetch" href="/assets/js/16.2dc42dda.js"><link rel="prefetch" href="/assets/js/17.f468ea74.js"><link rel="prefetch" href="/assets/js/19.2d9635b4.js"><link rel="prefetch" href="/assets/js/20.e1a65088.js"><link rel="prefetch" href="/assets/js/21.1e2d014d.js"><link rel="prefetch" href="/assets/js/22.bb5d78ae.js"><link rel="prefetch" href="/assets/js/23.af706a04.js"><link rel="prefetch" href="/assets/js/24.2315d1b7.js"><link rel="prefetch" href="/assets/js/25.39d9f1f2.js"><link rel="prefetch" href="/assets/js/26.9ebe43f0.js"><link rel="prefetch" href="/assets/js/27.f0c05f10.js"><link rel="prefetch" href="/assets/js/28.d8aa1745.js"><link rel="prefetch" href="/assets/js/29.f31e58c3.js"><link rel="prefetch" href="/assets/js/3.de1ef9c6.js"><link rel="prefetch" href="/assets/js/30.8dd5532d.js"><link rel="prefetch" href="/assets/js/31.781530aa.js"><link rel="prefetch" href="/assets/js/32.cb509a58.js"><link rel="prefetch" href="/assets/js/33.736b19a4.js"><link rel="prefetch" href="/assets/js/34.c24bb27e.js"><link rel="prefetch" href="/assets/js/35.45381e10.js"><link rel="prefetch" href="/assets/js/36.107f6d6c.js"><link rel="prefetch" href="/assets/js/37.25a21ce8.js"><link rel="prefetch" href="/assets/js/38.ec4132e0.js"><link rel="prefetch" href="/assets/js/39.8c0c1a0a.js"><link rel="prefetch" href="/assets/js/4.05f254cc.js"><link rel="prefetch" href="/assets/js/40.c9c440ca.js"><link rel="prefetch" href="/assets/js/5.bd94ded6.js"><link rel="prefetch" href="/assets/js/6.c5f5f561.js"><link rel="prefetch" href="/assets/js/7.ed0d64bf.js"><link rel="prefetch" href="/assets/js/8.7b8d1994.js"><link rel="prefetch" href="/assets/js/9.ac8faf08.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/home-logo.png" alt="王海东技术博客" class="logo"> <span class="site-name can-hide">王海东技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/javascript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJs
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  Css
+</a></div><div class="nav-item"><a href="/designpatterns/" class="nav-link router-link-active">
+  设计模式
+</a></div><div class="nav-item"><a href="/datastructure/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="Other" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/webassembly/" class="nav-link">
+  WebAssembly
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/softwaretools/" class="nav-link">
+  软件工具
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/javascript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJs
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  Css
+</a></div><div class="nav-item"><a href="/designpatterns/" class="nav-link router-link-active">
+  设计模式
+</a></div><div class="nav-item"><a href="/datastructure/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="Other" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/webassembly/" class="nav-link">
+  WebAssembly
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/softwaretools/" class="nav-link">
+  软件工具
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/designpatterns/" aria-current="page" class="sidebar-link">多态</a></li><li><a href="/designpatterns/singletonMode/" class="sidebar-link">单例模式</a></li><li><a href="/designpatterns/cacheMode/" class="sidebar-link">缓存模式</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="多态"><a href="#多态" class="header-anchor">#</a> 多态</h1> <hr> <h2 id="什么是多态"><a href="#什么是多态" class="header-anchor">#</a> 什么是多态 ？</h2> <blockquote><p>多态的思想是把“做什么”和“谁去做”分离开来，要实现这一点，就要消除类型之间的耦合关系。</p></blockquote> <hr> <h2 id="开发中的例子"><a href="#开发中的例子" class="header-anchor">#</a> 开发中的例子</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 定义地图的显示</span>
+<span class="token keyword">const</span> googleMap <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">show</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'开始渲染谷歌地图'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> baiduMap <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">show</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'开始渲染百度地图'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">renderMap</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 根据不同的类型显示地图</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'google'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        googleMap<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'baidu'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        baiduMap<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">renderMap</span><span class="token punctuation">(</span><span class="token string">'google'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：开始渲染谷歌地图</span>
+<span class="token function">renderMap</span><span class="token punctuation">(</span><span class="token string">'baidu'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：开始渲染百度地图</span>
+</code></pre></div><p><strong>renderMap</strong> 函数虽然保持了一定的弹性，但这种弹性是很脆弱的，一旦需要增加一个搜狗地图或腾讯地图，都要改动 <strong>renderMap</strong> 函数，继续往里面堆砌条件分支语句。</p> <hr> <h2 id="多态性的应用"><a href="#多态性的应用" class="header-anchor">#</a> 多态性的应用</h2> <ul><li>这个时候我们需要把程序中相同的部分抽象出来，当我们分别“展示地图”消息时，会调用它们的 <strong>show</strong> 方法，就会产生各自不同的执行结果。对象的多态性“做什么”和“怎么去做”是可以分开的，即使以后增加了其他地图， <strong>renderMap</strong> 函数不需要做任何改变，如下所示：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 定义地图的显示</span>
+<span class="token keyword">const</span> googleMap <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">show</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'开始渲染谷歌地图'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> baiduMap <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">show</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'开始渲染百度地图'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// 增加的搜狗地图</span>
+<span class="token keyword">const</span> sougouMap <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">show</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'开始渲染搜狗地图'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// 增加的腾讯地图</span>
+<span class="token keyword">const</span> tengxuMap <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">show</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'开始渲染腾讯地图'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">renderMap</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">map</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span>show <span class="token keyword">instanceof</span> <span class="token class-name">Function</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        map<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">renderMap</span><span class="token punctuation">(</span>googleMap<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：开始渲染谷歌地图</span>
+<span class="token function">renderMap</span><span class="token punctuation">(</span>tengxuMap<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：开始渲染腾讯地图</span>
+</code></pre></div><p>在这个例子中，每个 <strong>API</strong> 提供的方法名都是 <strong>show</strong>，在实际开发中方法名不会是相同的，这时可以借助适配器模式来解决问题。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d03b190c.js" defer></script><script src="/assets/js/2.d37cd0fb.js" defer></script><script src="/assets/js/18.bdb59058.js" defer></script>
+  </body>
+</html>
