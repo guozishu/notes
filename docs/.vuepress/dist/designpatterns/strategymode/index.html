@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>策略模式 | 王海东技术博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.495d9abf.css" as="style"><link rel="preload" href="/assets/js/app.6af1a8ec.js" as="script"><link rel="preload" href="/assets/js/2.5f2516b5.js" as="script"><link rel="preload" href="/assets/js/21.d25c9cf0.js" as="script"><link rel="prefetch" href="/assets/js/10.d3b82a60.js"><link rel="prefetch" href="/assets/js/11.f2452d79.js"><link rel="prefetch" href="/assets/js/12.38d41539.js"><link rel="prefetch" href="/assets/js/13.c766c9b5.js"><link rel="prefetch" href="/assets/js/14.4ec33f9f.js"><link rel="prefetch" href="/assets/js/15.ad9deb4c.js"><link rel="prefetch" href="/assets/js/16.7fd7b1ff.js"><link rel="prefetch" href="/assets/js/17.3772e17d.js"><link rel="prefetch" href="/assets/js/18.f79c56ae.js"><link rel="prefetch" href="/assets/js/19.90a76ca2.js"><link rel="prefetch" href="/assets/js/20.36d9e656.js"><link rel="prefetch" href="/assets/js/22.4de27407.js"><link rel="prefetch" href="/assets/js/23.978d58b1.js"><link rel="prefetch" href="/assets/js/24.6397db3c.js"><link rel="prefetch" href="/assets/js/25.417c6545.js"><link rel="prefetch" href="/assets/js/26.ad5699cd.js"><link rel="prefetch" href="/assets/js/27.8145d5a6.js"><link rel="prefetch" href="/assets/js/28.2f483a95.js"><link rel="prefetch" href="/assets/js/29.e7f5213f.js"><link rel="prefetch" href="/assets/js/3.6f772916.js"><link rel="prefetch" href="/assets/js/30.b0d779da.js"><link rel="prefetch" href="/assets/js/31.6ebc70a7.js"><link rel="prefetch" href="/assets/js/32.1b85ad3c.js"><link rel="prefetch" href="/assets/js/33.f10edf6a.js"><link rel="prefetch" href="/assets/js/34.251ead04.js"><link rel="prefetch" href="/assets/js/35.6143a12d.js"><link rel="prefetch" href="/assets/js/36.8a15331b.js"><link rel="prefetch" href="/assets/js/37.33eeaa00.js"><link rel="prefetch" href="/assets/js/38.b1f7eaf9.js"><link rel="prefetch" href="/assets/js/4.b3391b0c.js"><link rel="prefetch" href="/assets/js/5.b88862d9.js"><link rel="prefetch" href="/assets/js/6.d104786c.js"><link rel="prefetch" href="/assets/js/7.2e6cb6ae.js"><link rel="prefetch" href="/assets/js/8.7a97b4ea.js"><link rel="prefetch" href="/assets/js/9.2cf49fe7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.495d9abf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/home-logo.png" alt="王海东技术博客" class="logo"> <span class="site-name can-hide">王海东技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/javascript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJs
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  Css
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/designpatterns/" class="nav-link router-link-active">
+  设计模式
+</a></div><div class="nav-item"><a href="/datastructure/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="Other" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/webassembly/" class="nav-link">
+  WebAssembly
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/softwaretools/" class="nav-link">
+  软件工具
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/javascript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJs
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  Css
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/designpatterns/" class="nav-link router-link-active">
+  设计模式
+</a></div><div class="nav-item"><a href="/datastructure/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="Other" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/webassembly/" class="nav-link">
+  WebAssembly
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/softwaretools/" class="nav-link">
+  软件工具
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/designpatterns/" aria-current="page" class="sidebar-link">多态</a></li><li><a href="/designpatterns/singletonMode/" class="sidebar-link">单例模式</a></li><li><a href="/designpatterns/cacheMode/" class="sidebar-link">缓存模式</a></li><li><a href="/designpatterns/strategymode/" aria-current="page" class="active sidebar-link">策略模式</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="策略模式"><a href="#策略模式" class="header-anchor">#</a> 策略模式</h1></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/designpatterns/cacheMode/" class="prev">
+        缓存模式
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6af1a8ec.js" defer></script><script src="/assets/js/2.5f2516b5.js" defer></script><script src="/assets/js/21.d25c9cf0.js" defer></script>
+  </body>
+</html>
