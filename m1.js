@@ -1,1 +1,2 @@
 function develop(){}
+function developLong(){}
