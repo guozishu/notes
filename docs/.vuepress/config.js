@@ -19,6 +19,7 @@ module.exports = {
           { text: 'WebAssembly', link: '/webassembly/' },
           { text: 'linux', link: '/linux/' },
           { text: '软件工具', link: '/softwaretools/' },
+          { text: '其他', link: '/othertools/' },
         ]
       }
     ],
@@ -42,7 +43,8 @@ module.exports = {
       ],
       '/javascript/': [
         '',
-        'higherOrderFunction/'
+        'higherOrderFunction/',
+        'deepCloneAndShallowClone/'
       ],
       '/designpatterns/': [
         '',
@@ -52,21 +54,16 @@ module.exports = {
       ],
       '/datastructure/': [''],
       '/algorithm/': [''],
-      '/nodejs/': [
-        ''
-      ],
       '/docker/': [''],
       '/nodejs/': [
-        ''
+        '',
+        'unitTest/',
+        'functionTest/',
+        'integrationTest/'
       ],
       '/linux/': [''],
-      '/nodejs/': [
-        ''
-      ],
       '/softwaretools/': [''],
-      '/nodejs/': [
-        ''
-      ],
+      '/othertools/': [''],
       '/webassembly/': [''],
       '/': [''],
       sidebarDepth: 6

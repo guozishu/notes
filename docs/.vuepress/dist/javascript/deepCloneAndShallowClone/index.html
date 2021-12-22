@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>深拷贝和浅拷贝 | 王海东技术博客</title>
+    <meta name="generator" content="VuePress 1.8.3">
+    
+    <meta name="description" content="技术博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.e8a9bc33.js" as="script"><link rel="preload" href="/assets/js/2.e5fc11d4.js" as="script"><link rel="preload" href="/assets/js/32.680fba59.js" as="script"><link rel="prefetch" href="/assets/js/10.797819e3.js"><link rel="prefetch" href="/assets/js/11.d34d8d50.js"><link rel="prefetch" href="/assets/js/12.20bc6a2d.js"><link rel="prefetch" href="/assets/js/13.05f65cc0.js"><link rel="prefetch" href="/assets/js/14.a354ad14.js"><link rel="prefetch" href="/assets/js/15.a07d34b6.js"><link rel="prefetch" href="/assets/js/16.0f058653.js"><link rel="prefetch" href="/assets/js/17.a197a94e.js"><link rel="prefetch" href="/assets/js/18.9f973a44.js"><link rel="prefetch" href="/assets/js/19.b907d3a1.js"><link rel="prefetch" href="/assets/js/20.9de70193.js"><link rel="prefetch" href="/assets/js/21.3c42f526.js"><link rel="prefetch" href="/assets/js/22.f32a6919.js"><link rel="prefetch" href="/assets/js/23.a72b155f.js"><link rel="prefetch" href="/assets/js/24.560ea02f.js"><link rel="prefetch" href="/assets/js/25.5eb524a4.js"><link rel="prefetch" href="/assets/js/26.3dca6ee1.js"><link rel="prefetch" href="/assets/js/27.63dab7af.js"><link rel="prefetch" href="/assets/js/28.dc47c259.js"><link rel="prefetch" href="/assets/js/29.a06491ec.js"><link rel="prefetch" href="/assets/js/3.6a0416ff.js"><link rel="prefetch" href="/assets/js/30.82fbcb3c.js"><link rel="prefetch" href="/assets/js/31.70be5833.js"><link rel="prefetch" href="/assets/js/33.1e60f533.js"><link rel="prefetch" href="/assets/js/34.50f29d1b.js"><link rel="prefetch" href="/assets/js/35.0a3f5aff.js"><link rel="prefetch" href="/assets/js/36.9099573e.js"><link rel="prefetch" href="/assets/js/37.66da939b.js"><link rel="prefetch" href="/assets/js/38.6f7b553f.js"><link rel="prefetch" href="/assets/js/39.12026440.js"><link rel="prefetch" href="/assets/js/4.9935f42a.js"><link rel="prefetch" href="/assets/js/40.d0f9c672.js"><link rel="prefetch" href="/assets/js/41.57d4baed.js"><link rel="prefetch" href="/assets/js/5.6e892113.js"><link rel="prefetch" href="/assets/js/6.66f56ab2.js"><link rel="prefetch" href="/assets/js/7.4ed7875a.js"><link rel="prefetch" href="/assets/js/8.06ac22a1.js"><link rel="prefetch" href="/assets/js/9.ea9f7bf1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/home-logo.png" alt="王海东技术博客" class="logo"> <span class="site-name can-hide">王海东技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJs
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  Css
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/designpatterns/" class="nav-link">
+  设计模式
+</a></div><div class="nav-item"><a href="/datastructure/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="Other" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/webassembly/" class="nav-link">
+  WebAssembly
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/softwaretools/" class="nav-link">
+  软件工具
+</a></li><li class="dropdown-item"><!----> <a href="/othertools/" class="nav-link">
+  其他
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJs
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  Css
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/designpatterns/" class="nav-link">
+  设计模式
+</a></div><div class="nav-item"><a href="/datastructure/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="Other" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/webassembly/" class="nav-link">
+  WebAssembly
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/softwaretools/" class="nav-link">
+  软件工具
+</a></li><li class="dropdown-item"><!----> <a href="/othertools/" class="nav-link">
+  其他
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/javascript/" aria-current="page" class="sidebar-link">闭包的作用 - 提炼代码</a></li><li><a href="/javascript/higherOrderFunction/" class="sidebar-link">高阶函数</a></li><li><a href="/javascript/deepCloneAndShallowClone/" aria-current="page" class="active sidebar-link">深拷贝和浅拷贝</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/javascript/deepCloneAndShallowClone/#浅拷贝" class="sidebar-link">浅拷贝</a></li><li class="sidebar-sub-header"><a href="/javascript/deepCloneAndShallowClone/#深拷贝" class="sidebar-link">深拷贝</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="深拷贝和浅拷贝"><a href="#深拷贝和浅拷贝" class="header-anchor">#</a> 深拷贝和浅拷贝</h1> <hr> <h2 id="浅拷贝"><a href="#浅拷贝" class="header-anchor">#</a> 浅拷贝</h2> <h4 id="浅拷贝常用的技术有object-assign-es6展开操作符-赋值操作符-。这三种浅拷贝实现的细节也不一样-可以自己去探究下。"><a href="#浅拷贝常用的技术有object-assign-es6展开操作符-赋值操作符-。这三种浅拷贝实现的细节也不一样-可以自己去探究下。" class="header-anchor">#</a> 浅拷贝常用的技术有Object.assign ,es6展开操作符，赋值操作符=。这三种浅拷贝实现的细节也不一样，可以自己去探究下。</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span><span class="token string">'javascript'</span><span class="token punctuation">,</span>
+  time<span class="token operator">:</span><span class="token string">'1996-12-12'</span><span class="token punctuation">,</span>
+  type<span class="token operator">:</span><span class="token punctuation">{</span>
+    tech<span class="token operator">:</span><span class="token string">'编程语言'</span><span class="token punctuation">,</span>
+    operate<span class="token operator">:</span><span class="token string">'前端'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//  cloneObj1和cloneObj2都是浅拷贝对象。不过有细微差别</span>
+<span class="token keyword">let</span> cloneObj1 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> cloneObj2 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// cloneObj3和cloneObj2是相同的拷贝方式</span>
+<span class="token keyword">let</span> cloneObj3 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token operator">...</span>obj<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// cloneObj4和cloneObj1是相同的拷贝方式</span>
+<span class="token keyword">let</span> cloneObj4 <span class="token operator">=</span> obj<span class="token punctuation">;</span>
+</code></pre></div><hr> <h2 id="深拷贝"><a href="#深拷贝" class="header-anchor">#</a> 深拷贝</h2> <h4 id="深拷贝实现的常用方式有两种-一种是json-stringify和json-parse。一种是递归复制每个值。"><a href="#深拷贝实现的常用方式有两种-一种是json-stringify和json-parse。一种是递归复制每个值。" class="header-anchor">#</a> 深拷贝实现的常用方式有两种，一种是JSON.stringify和JSON.parse。一种是递归复制每个值。</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span><span class="token string">'leon'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span><span class="token number">38</span><span class="token punctuation">,</span>
+  list<span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">'brother'</span><span class="token punctuation">,</span><span class="token string">'sister'</span><span class="token punctuation">,</span><span class="token string">'small'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  type<span class="token operator">:</span><span class="token punctuation">{</span>
+    people<span class="token operator">:</span><span class="token punctuation">{</span>
+      sex<span class="token operator">:</span><span class="token string">'男性'</span>
+    <span class="token punctuation">}</span>，
+    height<span class="token operator">:</span><span class="token string">'2.1米'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 深拷贝，仅支持Object,Array,string,number,boolean,null类型</span>
+<span class="token keyword">let</span> deepClone1 <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 递归深拷贝</span>
+<span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 非对像返回当前值</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>obj <span class="token operator">||</span> <span class="token keyword">typeof</span> obj <span class="token operator">!==</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">let</span> newObj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// array or object</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    newObj <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> item <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newObj<span class="token punctuation">[</span>item<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> newObj
+<span class="token punctuation">}</span>
+<span class="token comment">// 深拷贝，基本支持所有类型</span>
+<span class="token keyword">let</span> deepClone2 <span class="token operator">=</span> <span class="token function">deepClone</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li><font color="red">JSON.stringify和JSON.parse有自己的局限性，JSON.stringify将对象转换为JSON仅支持Object,Array,string,number,boolean,null。函数属性,Symbol,undefined这三种类型会被忽略。</font></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/javascript/higherOrderFunction/" class="prev">
+        高阶函数
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e8a9bc33.js" defer></script><script src="/assets/js/2.e5fc11d4.js" defer></script><script src="/assets/js/32.680fba59.js" defer></script>
+  </body>
+</html>
