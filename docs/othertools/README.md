@@ -1,7 +1,8 @@
 # git合并
 
 - git主要有两种不同的合并分支的方法，rebase和merge，各个公司针对分支的管理也都是各不相同。所以学习下git的合并原理和API的使用很有必要，开始自己的学习之路。
-### 第一种merge
+---
+merge
 ---
 - 我们有两个基于master分支新建的hotfix分支和iss53分支。当我们在iss53分支上开发任务的时候线上出问题了，我们新建分支hotfix。
 ```js
@@ -9,6 +10,7 @@ git checkout master
 git checkout -b hotfix
 ```
 ![An image](./images/basic-branching-4.png)
+
 ---
 -  问题修复后我们需要把hotfix分支合并到master分支上。master分支和hotfix分支指向了同一个位置，可以删除hotfix分支。（如果存在远程分支hotfix有需要删除）
 ```js
@@ -18,6 +20,7 @@ git branch -d hotfix
 git push origin --delete hotfix
 ```
 ![An image](./images/basic-branching-5.png)
+
 ---
 - 当我们切回iss53分支进开发，开发完后将两个分支的末端所指的快照以及这两个分支的公共祖先，做一个简单的三方合并。iss53已经合并进来，就可以删除iss53 分支了。
 ```js
@@ -27,8 +30,9 @@ git merge iss53
 git branch -d iss53
 ```
 ![An image](./images/basic-merging-2.png)
+
 ---
-#### 第二种rebase-变基
+rebase
 - 
 ---
 > 操作方法

@@ -63,7 +63,10 @@ module.exports = {
       ],
       '/linux/': [''],
       '/softwaretools/': [''],
-      '/othertools/': [''],
+      '/othertools/': [
+        '',
+        'buildOpenCV/'
+      ],
       '/webassembly/': [''],
       '/': [''],
       sidebarDepth: 6
