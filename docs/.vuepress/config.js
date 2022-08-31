@@ -1,6 +1,6 @@
 module.exports = {
   title: '王海东技术博客',
-  base: '/',
+  base: '/notes/',
   description: '技术博客',
   themeConfig: {
     logo: '/home-logo.png',
