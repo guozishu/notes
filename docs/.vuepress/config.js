@@ -1,5 +1,6 @@
 module.exports = {
   title: '王海东技术博客',
+  base: '/',
   description: '技术博客',
   themeConfig: {
     logo: '/home-logo.png',
@@ -19,7 +20,6 @@ module.exports = {
           { text: 'WebAssembly', link: '/webassembly/' },
           { text: 'linux', link: '/linux/' },
           { text: '软件工具', link: '/softwaretools/' },
-          { text: '其他', link: '/othertools/' },
         ]
       }
     ],
@@ -43,8 +43,7 @@ module.exports = {
       ],
       '/javascript/': [
         '',
-        'higherOrderFunction/',
-        'deepCloneAndShallowClone/'
+        'higherOrderFunction/'
       ],
       '/designpatterns/': [
         '',
@@ -54,18 +53,20 @@ module.exports = {
       ],
       '/datastructure/': [''],
       '/algorithm/': [''],
+      '/nodejs/': [
+        ''
+      ],
       '/docker/': [''],
       '/nodejs/': [
-        '',
-        'unitTest/',
-        'functionTest/',
-        'integrationTest/'
+        ''
       ],
       '/linux/': [''],
+      '/nodejs/': [
+        ''
+      ],
       '/softwaretools/': [''],
-      '/othertools/': [
-        '',
-        'buildOpenCV/'
+      '/nodejs/': [
+        ''
       ],
       '/webassembly/': [''],
       '/': [''],
