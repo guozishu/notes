@@ -7,7 +7,7 @@ actionText: 博客 →
 actionLink: /javascript/
 features:
 - title: 学习
-  details: 活到老学到老，专注于写作
+  details: 活到老学到老111，专注于写作
 - title: 实践
   details: 通过实践来检验学习成果
 - title: 标准
