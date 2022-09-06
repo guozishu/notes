@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /home-logo.png
-heroText: 王海东技术博客
+heroText: 技术博客
 tagline: 技术博客
 actionText: 博客 →
 actionLink: /javascript/
